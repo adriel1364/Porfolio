@@ -51,7 +51,7 @@
 .sobre-vr {
   background: #181c24;
   color: #fff;
-  padding: 60px 0;
+  padding: 10px 0;
 }
 
 .sobre-vr-content {
@@ -68,6 +68,8 @@
   width: 320px;
   border-radius: 20px;
   box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+ 
+  
 }
 
 .sobre-vr-content h2 {
@@ -141,6 +143,10 @@
   margin-top: 30px;
   flex-wrap: wrap;
 }
+/* Filtro para iconos que son negros y deben ser blancos */
+.icono-blanco {
+  filter: invert(1) !important;
+}
 
 .tecnologias-logos img {
   width: 60px;
@@ -159,23 +165,78 @@
 .footer {
   background: #181c24;
   color: #fff;
-  padding: 30px 0;
+  padding: 10px 0;
+  border-top: 2px solid #00d2ff; /* Línea azul sutil arriba */
+}
+
+.footer-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
   text-align: center;
-  font-size: 1rem;
 }
 
-.footer-link {
+.footer-email {
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  margin-top: 0px;
+  text-align: center;
+}
+
+.footer-mensaje {
+  text-align: left;
+  font-size: 1.2rem;
+}
+
+/* Contenedor de grupos (Teléfonos y Redes) */
+.footer-group {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+/* Estilo para cada link con su icono */
+.footer-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   color: #fff;
-  margin-right: 10px;
-  text-decoration: underline;
-  transition: color 0.2s;
+  text-decoration: none; /* Quitamos el subrayado feo */
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  text-align: center;
 }
 
-.footer-link img {
-  width: 20px;
-  height: 20px;
-  vertical-align: middle;
-  margin-right: 5px;
+/* Efecto Hover: se pone azul y sube un poquito */
+.footer-item:hover {
+  color: #00d2ff;
+  transform: translateY(-3px);
 }
-.footer-link-imgg {
-  filter: invert(1); }
+
+.footer-item img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s;
+  text-align: center;
+}
+
+
+
+.footer-copy {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* Responsive: en celulares se apilan */
+@media (max-width: 600px) {
+  .footer-group {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
